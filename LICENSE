@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 CharlesAntoineBuguet
+Copyright (c) 2026 Charles-Antoine Buguet (CreateurSFX)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+-------------------------------------------------------------------------------
+
+The MIT license above applies to the CreateurSFX project's own source code.
+
+This project also redistributes third-party components (7-Zip and the 7-Zip
+SFX Modified module under the GNU LGPL, and rcedit under the MIT license),
+each governed by its own license and copyright. See THIRD-PARTY-NOTICES.md
+for details. The graphical assets (14773.ico, fond.jpg) are not covered by
+this license.
