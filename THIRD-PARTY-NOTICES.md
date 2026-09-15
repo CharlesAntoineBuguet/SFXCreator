@@ -22,7 +22,9 @@ CreateurSFX distribue les composants tiers suivants. Chacun reste soumis à sa p
 - **Auteurs / copyright :** module SFX © 2005–2016 Oleg N. Scherbakov ; bâti sur 7-Zip © 1999–2015 Igor Pavlov.
 - **Licence :** GNU LGPL (version 2.1 ou ultérieure).
 - **Intégration :** le binaire n'est pas livré comme fichier séparé ; il est encodé en Base64 dans `setup.ps1` et écrit temporairement lors de la génération d'un package.
+- **Sources amont :** l'URL exacte de téléchargement de ce binaire n'a pas été conservée dans l'historique du projet. Ne redistribue pas ce module dans une release publique tant que sa provenance, sa licence et son code source correspondant n'ont pas été documentés.
 - **SHA-256 (binaire décodé, référence projet) :** `93f8885f762ba1babe37376d0c0d6d7ee6670162c524a8e5cb1ca2f3f144fbd4`
+
 
 Les sources amont historiques du module « 7-Zip SFX Modified » d'Oleg Scherbakov sont notamment documentées autour du projet 7z SFX Modified / 7zsd. Le code source correspondant doit rester accessible conformément à la LGPL.
 
@@ -40,7 +42,7 @@ doit être inclus dans toute archive de distribution qui redistribue ces
 composants.
 
 Le code source correspondant doit être fourni ou rendu accessible selon les
-obligations de la LGPL.
+obligations de la LGPL. Pour le module SFX Modified, cette obligation ne peut pas être vérifiée tant que sa provenance n'est pas identifiée, mais le code source correspondant doit rester accessible conformément à la LGPL.
 
 ---
 

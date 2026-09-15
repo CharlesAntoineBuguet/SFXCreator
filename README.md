@@ -36,10 +36,13 @@ Le script est lisible et non compilé : tu peux vérifier exactement ce qu'il fa
 - Windows 64 bits.
 - PowerShell 5.1 ou ultérieur (inclus dans Windows).
 - Les fichiers suivants, placés **dans le même dossier que le script** :
-  - `setup.ps1`
-  - `7za.exe` (7-Zip console)
-  - `fond.jpg` (fond de la fenêtre)
-  - `sphere4.ico` (icône de la fenêtre de l'outil)
+- `setup.ps1`
+- `7za.exe` (7-Zip console)
+- `rcedit.exe`
+- le module SFX LZMA2 x64 intégré au script
+- `fond.jpg` (fond de la fenêtre)
+- les ressources d'interface (`sphere4.ico` / `14773.ico`) (icônes de la fenêtre de l'outil)
+
 
 > ℹ️ **Architecture :** `7za.exe` et le stub SFX embarqué sont en **64 bits**. Ils ne s'exécuteront pas sur un Windows 32 bits.
 
@@ -49,7 +52,7 @@ Le script est lisible et non compilé : tu peux vérifier exactement ce qu'il fa
 
 Deux façons de lancer l'outil :
 
-- **`SFXCreator.exe`** — lanceur prêt à l'emploi (double-clic). Pratique pour une utilisation quotidienne. Ce n'est pas le code source : c'est un exécutable de commodité qui démarre l'interface. Après toute modification de `setup.ps1`, de `7za.exe` ou des ressources, il faut **reconstruire** cet exe, sinon le dépôt et le lanceur divergent.
+- **`SFXCreator.exe`** — lanceur prêt à l'emploi (double-clic). Pratique pour une utilisation quotidienne. Ce n'est pas le code source : c'est un exécutable de commodité qui démarre l'interface. Après toute modification de `setup.ps1`, de `7za.exe`, de `rcedit.exe` ou des ressources, il faut **reconstruire** cet exe, sinon le dépôt et le lanceur divergent.
 - **`setup.ps1`** — source officielle, à relire et à auditer. C'est ce fichier qui définit réellement le comportement.
 
 ```powershell
@@ -58,12 +61,14 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 
 Ensuite :
 
-1. La fenêtre s'ouvre.
-
-2. Renseigne les champs :
+1. Lance le script.
+2. Renseigne dans la fenêtre :
    - **Répertoire source** : le dossier à empaqueter (glisser-déposer accepté).
    - **Icône** : un fichier `.ico` pour l'exécutable généré.
    - **Commande** : le programme à lancer après décompression (chemin relatif au contenu extrait, par ex. `setup.exe` ou `monapp.bat`).
+   - **Lancement** : *Visible* ou *Caché*.
+   - **Destination** : chemin de l'`.exe` de sortie.
+
    - **Lancement** : *Visible* ou *Caché*.
    - **Destination** : chemin de l'`.exe` de sortie.
 
@@ -107,7 +112,7 @@ Ce projet **ne patch pas** `7za.exe` : c'est la version officielle amont, telle 
 Vérification sous PowerShell :
 
 ```powershell
-Get-FileHash .\7za.exe -Algorithm SHA256
+Get-FileHash .\7za.exe, .\rcedit.exe -Algorithm SHA256
 ```
 
 > ⚠️ **Faux positifs antivirus.** Les stubs SFX 7-Zip combinés à une exécution automatique après extraction sont un schéma parfois signalé par certains moteurs antivirus, y compris pour des usages parfaitement légitimes. Les packages produits par l'outil, et éventuellement `SFXCreator.exe` lui-même s'il est aussi un SFX, peuvent donc déclencher des alertes. Pour une distribution large, une **signature de code (Authenticode)** des `.exe` réduit nettement ces alertes.
