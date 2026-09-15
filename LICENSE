@@ -25,7 +25,6 @@ SOFTWARE.
 The MIT license above applies to the CreateurSFX project's own source code.
 
 This project also redistributes third-party components (7-Zip and the 7-Zip
-SFX Modified module under the GNU LGPL, and rcedit under the MIT license),
-each governed by its own license and copyright. See THIRD-PARTY-NOTICES.md
-for details. The graphical assets (14773.ico, fond.jpg) are not covered by
-this license.
+SFX Modified module under the GNU LGPL), each governed by its own license and
+copyright. See THIRD-PARTY-NOTICES.md for details. The graphical assets
+(14773.ico, fond.jpg) are not covered by this license.

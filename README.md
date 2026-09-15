@@ -12,7 +12,7 @@ La plupart des générateurs SFX existants sont soit des binaires compilés opaq
 
 - **Zéro installation** — un simple script PowerShell + les binaires fournis. Rien à installer, rien à enregistrer.
 - **Interface glisser-déposer** — dépose ton dossier source, ton icône et ta destination directement dans la fenêtre.
-- **Métadonnées de version personnalisables** — `CompanyName`, `ProductName`, `FileDescription`, `FileVersion`, `ProductVersion` sont injectées dans l'exécutable généré (via `rcedit`). La majorité des outils grand public se contentent de coller une icône.
+- **Métadonnées de version personnalisables** — `CompanyName`, `ProductName`, `FileDescription`, `FileVersion`, `ProductVersion` sont injectées dans l'exécutable généré. La majorité des outils grand public se contentent de coller une icône.
 
 Le script est lisible et non compilé : tu peux vérifier exactement ce qu'il fait avant de l'exécuter.
 
@@ -35,7 +35,6 @@ Le script est lisible et non compilé : tu peux vérifier exactement ce qu'il fa
 - PowerShell 5.1 ou ultérieur (inclus dans Windows).
 - Les fichiers suivants, placés **dans le même dossier que le script** :
   - `7za.exe` (7-Zip console)
-  - `rcedit.exe`
   - le module SFX LZMA2 x64 intégré au script
 - Les ressources d'interface : `14773.ico` et `fond.jpg` (voir l'avertissement plus bas au sujet de leur licence).
 
@@ -68,12 +67,11 @@ Ce projet **ne modifie pas** les binaires tiers qu'il embarque : ce sont les ver
 | Fichier | Provenance | SHA-256 |
 |---|---|---|
 | `7za.exe` | 7-Zip 26.02 (x64), Igor Pavlov | `35d4d69d7cd6cb44558f208c3b1334268013f9daf82d2dda848893a1c30c59c2` |
-| `rcedit.exe` | rcedit (electron/rcedit) | `3e7801db1a5edbec91b49a24a094aad776cb4515488ea5a4ca2289c400eade2a` |
 | `7zsd_LZMA2_x64.sfx` | 7-Zip SFX Modified 1.7.0.3900, Oleg Scherbakov | `93f8885f762ba1babe37376d0c0d6d7ee6670162c524a8e5cb1ca2f3f144fbd4` |
 
 Vérification sous PowerShell :
 ```powershell
-Get-FileHash .\7za.exe, .\rcedit.exe -Algorithm SHA256
+Get-FileHash .\7za.exe -Algorithm SHA256
 ```
 
 > ⚠️ **Faux positifs antivirus.** Les stubs SFX 7-Zip combinés à une exécution automatique après extraction sont un schéma parfois signalé par certains moteurs antivirus, y compris pour des usages parfaitement légitimes. Les exécutables produits par cet outil peuvent donc déclencher des alertes. Pour une distribution large, une **signature de code (Authenticode)** de tes `.exe` réduit nettement ces alertes.
@@ -82,7 +80,7 @@ Get-FileHash .\7za.exe, .\rcedit.exe -Algorithm SHA256
 
 ## Composants tiers et licences
 
-CreateurSFX embarque des logiciels tiers, chacun sous sa propre licence. Voir **[THIRD-PARTY-NOTICES.md](./THIRD-PARTY-NOTICES.md)** pour le détail complet (7-Zip et le module SFX sous GNU LGPL, `rcedit` sous licence MIT).
+CreateurSFX embarque des logiciels tiers, chacun sous sa propre licence. Voir **[THIRD-PARTY-NOTICES.md](./THIRD-PARTY-NOTICES.md)** pour le détail complet (7-Zip et le module SFX sous GNU LGPL).
 
 ---
 

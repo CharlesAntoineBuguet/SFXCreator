@@ -29,44 +29,6 @@ CreateurSFX distribue les composants tiers suivants **sans modification**. Chacu
 
 ---
 
-## 3. rcedit — `rcedit.exe`
-
-- **Composant :** rcedit, éditeur de ressources d'exécutables Windows.
-- **Auteur / copyright :** Copyright © Cheng Zhao et contributeurs.
-- **Licence :** licence MIT.
-- **Sources amont :** https://github.com/electron/rcedit
-- **SHA-256 :** `3e7801db1a5edbec91b49a24a094aad776cb4515488ea5a4ca2289c400eade2a`
-
-### Texte de la licence MIT (rcedit)
-
-```
-The MIT License (MIT)
-
-Copyright (c) Cheng Zhao and contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-> Le texte MIT ci-dessus reflète les termes usuels de `rcedit`. Vérifie le fichier `LICENSE` du dépôt amont et recopie-le tel quel s'il diffère (année, formulation exacte du copyright).
-
----
-
 ## Information GNU LGPL (7-Zip et 7-Zip SFX Modified)
 
 Les composants 7-Zip et 7-Zip SFX Modified sont des logiciels libres ; tu peux les redistribuer et/ou les modifier selon les termes de la GNU Lesser General Public License telle que publiée par la Free Software Foundation, en version 2.1 ou (à ton choix) toute version ultérieure.
