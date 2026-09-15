@@ -21,7 +21,10 @@ CreateurSFX distribue les composants tiers suivants **sans modification**. Chacu
 - **Composant :** module auto-extractible « 7-Zip SFX Modified » (7zSD), variante LZMA2 x64, version 1.7.0.3900.
 - **Auteurs / copyright :** module SFX © 2005–2016 Oleg N. Scherbakov ; bâti sur 7-Zip © 1999–2015 Igor Pavlov.
 - **Licence :** GNU LGPL (version 2.1 ou ultérieure).
-- **Sources amont :** <!-- Renseigne ici l'URL exacte d'où tu as téléchargé le module SFX Modified. -->
+- **Sources amont :** l'URL exacte de téléchargement de ce binaire n'a pas été
+  conservée dans l'historique du projet. Ne redistribue pas ce module dans une
+  release publique tant que sa provenance, sa licence et son code source
+  correspondant n'ont pas été documentés.
 - **SHA-256 :** `93f8885f762ba1babe37376d0c0d6d7ee6670162c524a8e5cb1ca2f3f144fbd4`
 
 ---
@@ -70,9 +73,14 @@ Les composants 7-Zip et 7-Zip SFX Modified sont des logiciels libres ; tu peux l
 
 Ces logiciels sont distribués dans l'espoir qu'ils seront utiles, mais **SANS AUCUNE GARANTIE**, sans même la garantie implicite de VALEUR MARCHANDE ou d'ADÉQUATION À UN USAGE PARTICULIER. Voir la GNU Lesser General Public License pour plus de détails.
 
-Une copie de la GNU LGPL est disponible à l'adresse https://www.gnu.org/licenses/ ; elle est également fournie dans le fichier `LICENSES/LGPL-2.1.txt` de ce dépôt.
+Une copie de la GNU LGPL 2.1 est disponible à l'adresse
+https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html. Le texte intégral
+doit être inclus dans toute archive de distribution qui redistribue ces
+composants.
 
-Comme ces binaires sont redistribués **sans modification**, leur code source correspondant est disponible aux emplacements amont indiqués ci-dessus.
+Le code source correspondant doit être fourni ou rendu accessible selon les
+obligations de la LGPL. Pour le module SFX Modified, cette obligation ne peut
+pas être vérifiée tant que sa provenance n'est pas identifiée.
 
 ---
 

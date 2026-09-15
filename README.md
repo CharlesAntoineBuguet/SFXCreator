@@ -33,10 +33,10 @@ Le script est lisible et non compilé : tu peux vérifier exactement ce qu'il fa
 
 - Windows 64 bits.
 - PowerShell 5.1 ou ultérieur (inclus dans Windows).
-- Les trois binaires suivants, placés **dans le même dossier que le script** :
+- Les fichiers suivants, placés **dans le même dossier que le script** :
   - `7za.exe` (7-Zip console)
   - `rcedit.exe`
-  - `7zsd_LZMA2_x64.sfx` (module SFX)
+  - le module SFX LZMA2 x64 intégré au script
 - Les ressources d'interface : `14773.ico` et `fond.jpg` (voir l'avertissement plus bas au sujet de leur licence).
 
 > ℹ️ **Architecture :** les binaires fournis et les exécutables générés sont en **64 bits**. Ils ne s'exécuteront pas sur un Windows 32 bits. Pour une cible héritée x86, il faudrait le module `7zsd_LZMA2_x86.sfx` correspondant.
@@ -47,7 +47,7 @@ Le script est lisible et non compilé : tu peux vérifier exactement ce qu'il fa
 
 1. Lance le script :
    ```powershell
-   powershell -ExecutionPolicy Bypass -File .\CreateurSFX.ps1
+   powershell -ExecutionPolicy Bypass -File .\setup.ps1
    ```
 2. Renseigne dans la fenêtre :
    - **Répertoire source** : le dossier à empaqueter.
@@ -73,7 +73,7 @@ Ce projet **ne modifie pas** les binaires tiers qu'il embarque : ce sont les ver
 
 Vérification sous PowerShell :
 ```powershell
-Get-FileHash .\7za.exe, .\rcedit.exe, .\7zsd_LZMA2_x64.sfx -Algorithm SHA256
+Get-FileHash .\7za.exe, .\rcedit.exe -Algorithm SHA256
 ```
 
 > ⚠️ **Faux positifs antivirus.** Les stubs SFX 7-Zip combinés à une exécution automatique après extraction sont un schéma parfois signalé par certains moteurs antivirus, y compris pour des usages parfaitement légitimes. Les exécutables produits par cet outil peuvent donc déclencher des alertes. Pour une distribution large, une **signature de code (Authenticode)** de tes `.exe` réduit nettement ces alertes.
@@ -88,7 +88,7 @@ CreateurSFX embarque des logiciels tiers, chacun sous sa propre licence. Voir **
 
 ## Licence
 
-Le code de CreateurSFX est distribué sous licence **MIT** (voir `LICENSE`). *(À adapter si tu préfères Apache-2.0, GPLv3 ou une autre licence libre — le code étant invoqué séparément des binaires 7-Zip, tu es libre de ton choix.)*
+Le code original de CreateurSFX est distribué sous licence **MIT** (voir `LICENSE`).
 
 ---
 
