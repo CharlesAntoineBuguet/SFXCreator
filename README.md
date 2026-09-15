@@ -38,10 +38,8 @@ Le script est lisible et non compilé : tu peux vérifier exactement ce qu'il fa
 - Les fichiers suivants, placés **dans le même dossier que le script** :
 - `setup.ps1`
 - `7za.exe` (7-Zip console)
-- `rcedit.exe`
-- le module SFX LZMA2 x64 intégré au script
 - `fond.jpg` (fond de la fenêtre)
-- les ressources d'interface (`sphere4.ico` / `14773.ico`) (icônes de la fenêtre de l'outil)
+- les ressources d'interface (`sphere4.ico`) (icônes de la fenêtre de l'outil)
 
 
 > ℹ️ **Architecture :** `7za.exe` et le stub SFX embarqué sont en **64 bits**. Ils ne s'exécuteront pas sur un Windows 32 bits.
@@ -112,7 +110,7 @@ Ce projet **ne patch pas** `7za.exe` : c'est la version officielle amont, telle 
 Vérification sous PowerShell :
 
 ```powershell
-Get-FileHash .\7za.exe, .\rcedit.exe -Algorithm SHA256
+Get-FileHash .\7za.exe -Algorithm SHA256
 ```
 
 > ⚠️ **Faux positifs antivirus.** Les stubs SFX 7-Zip combinés à une exécution automatique après extraction sont un schéma parfois signalé par certains moteurs antivirus, y compris pour des usages parfaitement légitimes. Les packages produits par l'outil, et éventuellement `SFXCreator.exe` lui-même s'il est aussi un SFX, peuvent donc déclencher des alertes. Pour une distribution large, une **signature de code (Authenticode)** des `.exe` réduit nettement ces alertes.
