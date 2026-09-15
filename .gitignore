@@ -1,0 +1,14 @@
+# Temporaires Windows / PowerShell
+*.tmp
+*.log
+Thumbs.db
+Desktop.ini
+
+# Fichiers générés localement
+*.sfx
+*.conf
+*.7z
+
+# IDE
+.vscode/
+.idea/

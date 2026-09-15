@@ -1,6 +1,6 @@
 # Mentions relatives aux composants tiers
 
-CreateurSFX distribue les composants tiers suivants **sans modification**. Chacun reste soumis à sa propre licence et à son propre copyright. Les empreintes SHA-256 permettent de vérifier que les binaires correspondent aux versions amont officielles.
+CreateurSFX distribue les composants tiers suivants. Chacun reste soumis à sa propre licence et à son propre copyright. Les empreintes SHA-256 permettent de vérifier que les binaires fournis séparément correspondent aux versions amont officielles.
 
 ---
 
@@ -16,51 +16,15 @@ CreateurSFX distribue les composants tiers suivants **sans modification**. Chacu
 
 ---
 
-## 2. 7-Zip SFX Modified — `7zsd_LZMA2_x64.sfx`
+## 2. 7-Zip SFX Modified — stub embarqué dans `setup.ps1`
 
 - **Composant :** module auto-extractible « 7-Zip SFX Modified » (7zSD), variante LZMA2 x64, version 1.7.0.3900.
 - **Auteurs / copyright :** module SFX © 2005–2016 Oleg N. Scherbakov ; bâti sur 7-Zip © 1999–2015 Igor Pavlov.
 - **Licence :** GNU LGPL (version 2.1 ou ultérieure).
-- **Sources amont :** <!-- Renseigne ici l'URL exacte d'où tu as téléchargé le module SFX Modified. -->
-- **SHA-256 :** `93f8885f762ba1babe37376d0c0d6d7ee6670162c524a8e5cb1ca2f3f144fbd4`
+- **Intégration :** le binaire n'est pas livré comme fichier séparé ; il est encodé en Base64 dans `setup.ps1` et écrit temporairement lors de la génération d'un package.
+- **SHA-256 (binaire décodé, référence projet) :** `93f8885f762ba1babe37376d0c0d6d7ee6670162c524a8e5cb1ca2f3f144fbd4`
 
----
-
-## 3. rcedit — `rcedit.exe`
-
-- **Composant :** rcedit, éditeur de ressources d'exécutables Windows.
-- **Auteur / copyright :** Copyright © Cheng Zhao et contributeurs.
-- **Licence :** licence MIT.
-- **Sources amont :** https://github.com/electron/rcedit
-- **SHA-256 :** `3e7801db1a5edbec91b49a24a094aad776cb4515488ea5a4ca2289c400eade2a`
-
-### Texte de la licence MIT (rcedit)
-
-```
-The MIT License (MIT)
-
-Copyright (c) Cheng Zhao and contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-> Le texte MIT ci-dessus reflète les termes usuels de `rcedit`. Vérifie le fichier `LICENSE` du dépôt amont et recopie-le tel quel s'il diffère (année, formulation exacte du copyright).
+Les sources amont historiques du module « 7-Zip SFX Modified » d'Oleg Scherbakov sont notamment documentées autour du projet 7z SFX Modified / 7zsd. Le code source correspondant doit rester accessible conformément à la LGPL.
 
 ---
 
@@ -70,12 +34,16 @@ Les composants 7-Zip et 7-Zip SFX Modified sont des logiciels libres ; tu peux l
 
 Ces logiciels sont distribués dans l'espoir qu'ils seront utiles, mais **SANS AUCUNE GARANTIE**, sans même la garantie implicite de VALEUR MARCHANDE ou d'ADÉQUATION À UN USAGE PARTICULIER. Voir la GNU Lesser General Public License pour plus de détails.
 
-Une copie de la GNU LGPL est disponible à l'adresse https://www.gnu.org/licenses/ ; elle est également fournie dans le fichier `LICENSES/LGPL-2.1.txt` de ce dépôt.
+Une copie de la GNU LGPL 2.1 est disponible à l'adresse
+https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html. Le texte intégral
+doit être inclus dans toute archive de distribution qui redistribue ces
+composants.
 
-Comme ces binaires sont redistribués **sans modification**, leur code source correspondant est disponible aux emplacements amont indiqués ci-dessus.
+Le code source correspondant doit être fourni ou rendu accessible selon les
+obligations de la LGPL.
 
 ---
 
 ## Ressources graphiques non couvertes
 
-Les fichiers `14773.ico` et `fond.jpg` utilisés par l'interface **ne sont couverts ni par ce document ni par la licence du projet**. Leur licence d'origine doit être vérifiée avant toute redistribution, ou ces fichiers doivent être remplacés par des ressources sous licence libre explicite.
+Les fichiers `sphere4.ico` et `fond.jpg` utilisés par l'interface **ne sont couverts ni par ce document ni par la licence du projet**. Leur licence d'origine doit être vérifiée avant toute redistribution, ou ces fichiers doivent être remplacés par des ressources sous licence libre explicite.
